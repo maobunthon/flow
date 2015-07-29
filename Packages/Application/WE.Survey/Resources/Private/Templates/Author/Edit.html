@@ -1,11 +1,9 @@
 <f:layout name="Default" />
 
-<f:section name="Title">New question</f:section>
+<f:section name="Title">Edit author "{author.name}"</f:section>
 
 <f:section name="Content">
-	<p>Just fill out the following form to create a new question:</p>
-
-	<f:form action="create" objectName="newQuestion">
+	<f:form action="update" object="{author}" objectName="author">
 		<ol>
 			<li>
 				<label for="name">Name</label>
@@ -13,7 +11,7 @@
 			</li>
 		
 			<li>
-				<f:form.submit value="Create" />
+				<f:form.submit value="Update" />
 			</li>
 		</ol>
 	</f:form>

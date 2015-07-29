@@ -1,5 +1,5 @@
 <?php
-namespace WE\Survey\Domain\Model;
+namespace WE\Survey\Controller;
 
 /*                                                                        *
  * This script belongs to the TYPO3 Flow package "WE.Survey".             *
@@ -7,32 +7,16 @@ namespace WE\Survey\Domain\Model;
  *                                                                        */
 
 use TYPO3\Flow\Annotations as Flow;
-use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @Flow\Entity
- */
-class Question {
+class AdminController extends \TYPO3\Flow\Mvc\Controller\ActionController {
 
 	/**
-	 * @var string
-	 */
-	protected $name;
-
-
-	/**
-	 * @return string
-	 */
-	public function getName() {
-		return $this->name;
-	}
-
-	/**
-	 * @param string $name
 	 * @return void
 	 */
-	public function setName($name) {
-		$this->name = $name;
+	public function indexAction() {
+		$this->view->assign('foos', array(
+			'bar', 'baz'
+		));
 	}
 
 }
