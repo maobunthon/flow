@@ -1,0 +1,6 @@
+-
+  name: 'Project Week 3'
+  uriPattern: '(WE.Survey)'
+  defaults:
+    '@controller': 'Question'
+    '@action':     'index'
